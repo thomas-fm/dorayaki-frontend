@@ -3,17 +3,18 @@ import logo from './logo.svg'
 import './App.css'
 import Sidebar from './layouts/Sidebar'
 import StoreList from './pages/StoreList'
-
+import Main from './layouts/Main'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      {/* <Sidebar/> */}
-      <StoreList/>
-    </div>
-  )
+    return (
+        <>
+            {/* <Sidebar/> */}
+            <Main />
+            <p>Test</p>
+        </>
+    )
 }
 
 export default App
