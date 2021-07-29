@@ -1,0 +1,77 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-select
+
+PATH: 
+  C:\Users\ACER\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\ACER\AppData\Local\Programs\Python\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ACER\Downloads\Software\kotlin-compiler-1.2.21\kotlinc;C:\Program Files\dotnet\;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Users\Thomas FM\AppData\Roaming\Python\Python38\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-13.0.2;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\MariaDB 10.5\bin;C:\msys64\mingw64\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Go\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\ACER\.cargo\bin;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.3\bin;C:\Users\ACER\.dotnet\tools;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Users\ACER\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Users\ACER\.dotnet\tools;C:\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin;C:\Users\ACER\Downloads\cmder;C:\Program Files\heroku\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.1\bin;;C:\Users\ACER\go\bin;C:\Users\ACER\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@ant-design/icons/-/icons-4.6.2.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141289:19)
+      at Object.onceWrapper (events.js:481:28)
+      at ClientRequest.emit (events.js:375:28)
+      at TLSSocket.emitRequestTimeout (_http_client.js:790:9)
+      at Object.onceWrapper (events.js:481:28)
+      at TLSSocket.emit (events.js:387:35)
+      at TLSSocket.Socket._onTimeout (net.js:484:8)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7)
+
+npm manifest: 
+  {
+    "name": "dorayaki-frontend",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "@fortawesome/fontawesome-svg-core": "^1.2.35",
+      "@fortawesome/free-solid-svg-icons": "^5.15.3",
+      "@fortawesome/react-fontawesome": "^0.1.14",
+      "@headlessui/react": "^1.3.0",
+      "@heroicons/react": "^1.0.2",
+      "@material-ui/core": "^4.12.1",
+      "@material-ui/data-grid": "^4.0.0-alpha.34",
+      "@material-ui/icons": "^4.11.2",
+      "antd": "^4.16.9",
+      "axios": "^0.21.1",
+      "clsx": "^1.1.1",
+      "formik": "^2.2.9",
+      "prop-types": "^15.7.2",
+      "react": "^17.0.0",
+      "react-burger-menu": "^3.0.6",
+      "react-collapsible": "^2.8.3",
+      "react-collapsible-content": "^1.0.0",
+      "react-dom": "^17.0.0",
+      "react-jss": "^10.7.1",
+      "react-redux": "^7.2.4",
+      "react-router-dom": "^5.2.0",
+      "react-super-responsive-table": "^5.2.0",
+      "react-table": "^7.7.0",
+      "simple-flexbox": "^2.3.3",
+      "tailwindcss": "^2.2.7"
+    },
+    "devDependencies": {
+      "@iconify/react": "^3.0.0-beta.1",
+      "@vitejs/plugin-react-refresh": "^1.3.1",
+      "prettier": "2.3.2",
+      "sass": "^1.36.0",
+      "vite": "^2.4.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

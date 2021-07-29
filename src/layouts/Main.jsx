@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     content: {
-        flexGrow: 1,
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -42,22 +41,7 @@ const useStyles = makeStyles((theme) => ({
 const Main = () => {
     const classes = useStyles()
     const [open, setOpen] = useContext(SidebarContext)
-    return (
-        <div className={classes.root}>
-            <Sidebar />
-            <CssBaseline />
-            <Container disableGutters>
-                <main
-                    className={clsx(classes.content, {
-                        [classes.contentShift]: open,
-                    })}
-                >
-                    <div className={classes.drawerHeader} />
-                    <Body />
-                </main>
-            </Container>
-        </div>
-    )
+    return <Sidebar />
 }
 
 export default Main
