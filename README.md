@@ -17,7 +17,7 @@ cd dorayaki-frontend
 npm install
 npm run dev
 ```
-4. API akan berjalan pada `http://localhost:3000/`
+4. Website akan berjalan pada `http://localhost:3000/`
 # Screenshot website
 1. Tampilan daftar variant
 ![Variant dorayaki](doc/variants.jpg?raw=true "Title")
