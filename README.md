@@ -27,9 +27,9 @@ npm run dev
 ![Form toko dan dorayaki](doc/forms.jpg?raw=true "Title")
 4. Tampilan tabel dan form stok toko
 ![Stock toko](doc/stocks.jpg?raw=true "Title")
-5. Tampilan daftar toko versi mobile
+5. Tampilan daftar toko versi mobile  
 ![Daftar toko versi mobile](doc/stores-mobile.jpg?raw=true "Title")
-6. Tampilan stock suatu toko
+6. Tampilan stock suatu toko  
 ![Form toko dan dorayaki](doc/stocks-mobile.jpg?raw=true "Title")
 # Author
 Thomas Ferdinand Martin - 13519099
