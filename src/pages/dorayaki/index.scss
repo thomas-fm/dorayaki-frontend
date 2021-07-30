@@ -51,3 +51,15 @@
     color: rgb(122, 123, 218);
     font-size: 18px;
 }
+
+// Dorayaki form
+.container-dorayaki-form {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+
+    ul {
+        list-style: none;
+    }
+}

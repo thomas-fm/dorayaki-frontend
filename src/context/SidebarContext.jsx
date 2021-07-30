@@ -11,7 +11,7 @@ export const SidebarProvider = ({ children, selected }) => {
         }
     }, [current, selected])
     return (
-        <SidebarContext.Provider value={[current, setCurrent]}>
+        <SidebarContext.Provider value={{ current, setCurrent }}>
             {children}
         </SidebarContext.Provider>
     )

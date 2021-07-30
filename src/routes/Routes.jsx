@@ -9,6 +9,7 @@ import URL from '../resources/url'
 import StoreList from '../pages/store/List/StoreList'
 import StoreForm from '../pages/store/Form/StoreForm'
 import DorayakiList from '../pages/dorayaki/DorayakiList'
+import DorayakiForm from '../pages/dorayaki/DorayakiForm'
 
 const useStyles = createUseStyles({
     container: {
@@ -43,7 +44,6 @@ const Main = () => {
                 <Column flexGrow={1} className={classes.mainBlock}>
                     <Nav />
                     <div className={classes.contentBlock}>
-                        {/* add suspense for loading component todo */}
                         <Switch>
                             <Route
                                 exact
@@ -52,7 +52,7 @@ const Main = () => {
                             />
                             <Route
                                 exact
-                                path={URL.store}
+                                path={'/stores'}
                                 // render={() => <div>Dashboard</div>}
                                 component={StoreList}
                             />
@@ -63,8 +63,13 @@ const Main = () => {
                             />
                             <Route
                                 exact
-                                path={URL.storeInfo}
+                                path={'/stocks/:id'}
                                 component={StoreForm}
+                            />
+                            <Route
+                                exact
+                                path={'/variant/create'}
+                                component={DorayakiForm}
                             />
                             <Redirect to={URL.store} />
                         </Switch>

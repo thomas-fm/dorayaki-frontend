@@ -55,7 +55,7 @@ const SidebarItem = ({
         ? theme.color.paleBlue
         : theme.color.grayishBlue2
 
-    const onClicked = () => {
+    const onClicked = (e) => {
         if (onClick) {
             onClick(e)
         }
@@ -69,7 +69,7 @@ const SidebarItem = ({
                 onClick={onClicked}
                 className={containerClass}
             >
-                <Icon color={iconColor} opacity={!isSelected && '0.4'} />
+                <Icon color={iconColor} />
                 <span className={classes.title}>{title}</span>
             </Row>
         </Column>

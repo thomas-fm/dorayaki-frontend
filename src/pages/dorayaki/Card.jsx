@@ -17,9 +17,6 @@ const DorayakiCard = ({ url, name, description, handleEdit, id }) => {
             <div className="text-container">
                 <h3>{name}</h3>
                 <div>{description}</div>
-                <button className="btn" onClick={handleEdit} value={id}>
-                    Edit
-                </button>
             </div>
         </div>
     )

@@ -26,6 +26,7 @@ h2 {
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
+        align-items: center;
     }
     .table-header {
         background-color: #95a5a6;
@@ -47,11 +48,11 @@ h2 {
         flex-basis: 15%;
     }
     .col-4 {
-        flex-basis: 15%;
+        flex-basis: 10%;
     }
 
     .col-5 {
-        flex-basis: 10%;
+        flex-basis: 15%;
     }
     @media all and (max-width: 767px) {
         .table-header {
@@ -63,6 +64,10 @@ h2 {
         .col {
             flex-basis: 100%;
         }
+        .col-5 {
+            display: flex;
+            align-items: center;
+        }
         .col {
             display: flex;
             padding: 10px 0;
@@ -70,7 +75,7 @@ h2 {
                 color: #6c7a89;
                 padding-right: 10px;
                 content: attr(data-label);
-                flex-basis: 50%;
+                // flex-basis: 50%;
                 text-align: right;
                 // min-width: 211px;
                 min-width: 50%;

@@ -14,54 +14,72 @@ import {
     TableHead,
     TableRow,
 } from '@material-ui/core'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faEthernet, faInfo, faTrash } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
+import Store from '../../../apis/Store'
+import { useHistory } from 'react-router-dom'
 
-const data = [
-    {
-        name: 'Dorayaki1',
-        street: 'jalan nangka nomor 1',
-        district: 'walantaka',
-        province: 'Banten',
-    },
-    {
-        name: 'Dorayaki2',
-        street: 'jalan nangka nomor 2',
-        district: 'walantaka',
-        province: 'Banten',
-    },
-    {
-        name: 'Dorayaki3',
-        street: 'jalan nangka nomor asdas kd asdja lsk dj asdaj sda la sjd asldk aj laskjd  3',
-        district: 'Serang',
-        province: 'Banten',
-    },
-]
+// const data = [
+//     {
+//         name: 'Dorayaki1',
+//         street: 'jalan nangka nomor 1',
+//         district: 'walantaka',
+//         province: 'Banten',
+//     },
+//     {
+//         name: 'Dorayaki2',
+//         street: 'jalan nangka nomor 2',
+//         district: 'walantaka',
+//         province: 'Banten',
+//     },
+//     {
+//         name: 'Dorayaki3',
+//         street: 'jalan nangka nomor asdas kd asdja lsk dj asdaj sda la sjd asldk aj laskjd  3',
+//         district: 'Serang',
+//         province: 'Banten',
+//     },
+// ]
 
 const StoreList = () => {
-    const [stores, setStores] = useState([
-        {
-            id: 1,
-            name: 'Apa aja',
-            district: 'Serang',
-            province: 'Walantaka',
-            street: 'Jalan nangasdasdasdas asdasd asdasdas akkkkkkk kkkkkkkk kkkkkkkkk kkkkkkkkkk kkkk kkkkkkkksd ka',
-        },
-    ])
+    const [data, setData] = useState()
     const [fetch, setFetch] = useState(true)
+    let history = useHistory()
+
     const handleDelete = (i) => {
-        // call api
+        Store.delete(i)
         setFetch(true)
         console.log(`delete ${i}`)
     }
 
-    const handleMove = (i) => {
-        // pindah page
-        console.log(`this ${i}`)
+    // const handleMove = (i) => {
+    //     // pindah page
+    //     console.log(`this ${i}`)
+    // }
+
+    const movePage = (id) => {
+        history.push(`/stocks/${id}`)
     }
+
     useEffect(() => {
-        if (fetch) {
-            // call api
-        }
+        console.log('test')
+        setFetch(true)
+
+        console.log('test2')
+        Store.get().then((res) => {
+            if (res.data.data) {
+                setData(
+                    res.data.data.map((el) => {
+                        const { id, name, street, district, province } = el
+                        return { id, name, street, district, province }
+                    }),
+                )
+            } else {
+                console.log('loh kok eror')
+            }
+        })
+        // fetchData()
+
+        console.log('what')
         setFetch(false)
     }, [fetch])
     return (
@@ -77,37 +95,49 @@ const StoreList = () => {
                         <div className="col col-4">Provinsi</div>
                         <div className="col col-5"></div>
                     </li>
-                    {data.map((el, i) => (
-                        <li
-                            className="table-row"
-                            key={i}
-                            onClick={() => handleMove(i)}
-                        >
-                            <div className="col col-1" data-label="Nama">
-                                {el.name}
-                            </div>
-                            <div className="col col-2" data-label="Jalan">
-                                {el.street}
-                            </div>
-                            <div className="col col-3" data-label="Kecamatan">
-                                {el.district}
-                            </div>
-                            <div className="col col-4" data-label="Provinsi">
-                                {el.province}
-                            </div>
-                            <div className="col col-5" data-label="">
-                                <IconButton
-                                    onClick={() => handleDelete(i)}
-                                    key={i}
+                    {data &&
+                        data.map((el, i) => (
+                            <li className="table-row" key={i}>
+                                <div className="col col-1" data-label="Nama">
+                                    {el.name}
+                                </div>
+                                <div className="col col-2" data-label="Jalan">
+                                    {el.street}
+                                </div>
+                                <div
+                                    className="col col-3"
+                                    data-label="Kecamatan"
                                 >
-                                    <FontAwesomeIcon
-                                        icon={faTrash}
-                                        color={'#3498db'}
-                                    />
-                                </IconButton>
-                            </div>
-                        </li>
-                    ))}
+                                    {el.district}
+                                </div>
+                                <div
+                                    className="col col-4"
+                                    data-label="Provinsi"
+                                >
+                                    {el.province}
+                                </div>
+                                <div className="col col-5" data-label="Aksi">
+                                    <IconButton
+                                        onClick={() => handleDelete(el.id)}
+                                        key={el.id}
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faTrash}
+                                            color={'#373a47'}
+                                        />
+                                    </IconButton>
+                                    <IconButton
+                                        onClick={() => movePage(el.id)}
+                                        key={`i${el.id}`}
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faInfo}
+                                            color={'#373a47'}
+                                        />
+                                    </IconButton>
+                                </div>
+                            </li>
+                        ))}
                 </ul>
             </div>
         </>
