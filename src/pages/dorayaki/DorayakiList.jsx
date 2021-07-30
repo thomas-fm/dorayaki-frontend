@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Variant from '../../apis/Variant'
 import DorayakiCard from './Card'
 import './index.scss'
 
 const DorayakiList = () => {
+    const [variants, setVariants] = useState([])
+    useEffect(() => {
+        Variant.get().then((res) => {
+            console.log(res.data.data)
+
+            setVariants(
+                res.data.data.map((el) => {
+                    const { flavour, id, img_url, description } = el
+
+                    return { flavour, id, img_url, description }
+                }),
+            )
+        })
+    }, [])
     const handleEdit = (e) => {
         console.log(e.currentTarget.value)
     }
@@ -17,38 +32,14 @@ const DorayakiList = () => {
                 }}
                 className="dorayaki-container"
             >
-                <DorayakiCard
-                    url="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                    name="Dorayaki"
-                    description="apa ya"
-                    handleEdit={handleEdit}
-                    id={1}
-                />
-                <DorayakiCard
-                    url="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                    name="Dorayaki"
-                    description="apa ya"
-                    handleEdit={handleEdit}
-                    id={2}
-                />
-                <DorayakiCard
-                    url="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                    name="Dorayaki"
-                    description="apa ya"
-                    handleEdit={handleEdit}
-                    id={3}
-                />
-                <DorayakiCard
-                    url="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                    name="Dorayaki"
-                    description="apa ys adksdj asldkja slkdjalskdjalsk
-                    asdasdas
-                    adsdasdaa ajsdhasdh asjkdaslj asdjk
-                    sdasdasd asdkasdklaj
-                    jd alsdjk a"
-                    handleEdit={handleEdit}
-                    id={4}
-                />
+                {variants.map((el) => (
+                    <DorayakiCard
+                        url={el.img_url}
+                        name={el.flavour}
+                        description={el.description}
+                        id={el.id}
+                    />
+                ))}
             </div>
         </>
     )

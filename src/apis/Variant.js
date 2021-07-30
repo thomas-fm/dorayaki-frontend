@@ -8,6 +8,9 @@ class VariantAPI {
     delete(id) {
         return api.delete(`/variants/${id}`)
     }
+    insert(data) {
+        return api.post(`/variants/`, data)
+    }
 }
 
 export default new VariantAPI()

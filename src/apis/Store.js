@@ -11,6 +11,9 @@ class StoreAPI {
     delete(id) {
         return api.delete(`/stores/${id}`)
     }
+    insert(data) {
+        return api.post(`/stores/`, data)
+    }
 }
 
 export default new StoreAPI()

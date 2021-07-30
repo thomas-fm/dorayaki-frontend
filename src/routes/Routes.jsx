@@ -10,6 +10,7 @@ import StoreList from '../pages/store/List/StoreList'
 import StoreForm from '../pages/store/Form/StoreForm'
 import DorayakiList from '../pages/dorayaki/DorayakiList'
 import DorayakiForm from '../pages/dorayaki/DorayakiForm'
+import Forms from '../pages/create/CustomForm'
 
 const useStyles = createUseStyles({
     container: {
@@ -71,6 +72,7 @@ const Main = () => {
                                 path={'/variant/create'}
                                 component={DorayakiForm}
                             />
+                            <Route exact path={'/forms'} component={Forms} />
                             <Redirect to={URL.store} />
                         </Switch>
                     </div>

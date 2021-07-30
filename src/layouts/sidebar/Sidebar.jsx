@@ -81,7 +81,7 @@ const SidebarComponent = () => {
                 id={'tambah'}
                 title="Tambahkan"
                 icon={Plus}
-                onClick={() => onClick('SLUGS.agents')}
+                onClick={() => onClick('/forms')}
             />
             <div className={classes.separator}></div>
         </SidebarMenu>

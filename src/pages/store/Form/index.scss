@@ -105,7 +105,8 @@
     }
 }
 @media all and (max-width: 767px) {
-    .container-store {
+    .container-store,
+    .stock-table {
         flex-direction: column;
     }
     .stock-table,
