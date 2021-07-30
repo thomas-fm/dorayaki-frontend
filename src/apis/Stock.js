@@ -8,11 +8,14 @@ class StockAPI {
     getVariant(id, varID) {
         return api.get(`/stocks/${id}/variant/${varID}`)
     }
-    delete(id) {
-        return api.delete(`/stores/${id}`)
-    }
     update(id, varID, data) {
         return api.put(`/stocks/${id}/variant/${varID}`, data)
+    }
+    delete(id, varID) {
+        return api.delete(`/stocks/${id}/variant/${varID}`)
+    }
+    insert(id, data) {
+        return api.post(`/stocks/${id}`, data)
     }
 }
 

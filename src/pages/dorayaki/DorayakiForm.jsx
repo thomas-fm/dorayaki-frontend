@@ -15,9 +15,6 @@ const DorayakiForm = () => {
     }
     const handleEdit = (e) => {}
     const handleDelete = (e) => {}
-    const handleChange = (e) => {
-        let file = e.currentTarget.files[0]
-    }
     return (
         <>
             <div className="container-dorayaki-form">
@@ -30,7 +27,7 @@ const DorayakiForm = () => {
                     </li>
                     <li>
                         <div className="col-1">URL</div>
-                        <input type="file" onChange={}></input>
+                        <input type="file"></input>
                     </li>
                     <li>
                         <div className="col-1">Deskripsi</div>

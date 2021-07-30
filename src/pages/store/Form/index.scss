@@ -3,11 +3,6 @@
     width: 100%;
 }
 .container-store {
-    // max-width: 1000px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // padding-left: 10px;
-    // padding-right: 10px;
     font-size: 1rem;
     width: 100%;
     display: flex;
@@ -30,39 +25,48 @@
 }
 
 .stock-table {
-    background: white;
-    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    li {
-        display: flex;
-        flex-direction: row;
+    // width: 50%;
+    // flex-basis: 50%;
+    display: flex;
+    .stock {
+        background: white;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+        flex-basis: 50%;
+        align-items: center;
+    }
+    .table {
+        li {
+            display: flex;
+            flex-direction: row;
 
-        .col-1,
-        .col-2 {
-            padding: 12px;
-        }
-        width: 100%;
-        .col-1 {
-            flex-basis: 40%;
-        }
-        .col-2 {
-            flex-basis: 40%;
-        }
-        .col-3 {
-            flex-basis: 10%;
-        }
-        .col-4 {
-            flex-basis: 10%;
-        }
+            .col-1,
+            .col-2 {
+                padding: 12px;
+            }
+            width: 100%;
+            .col-1 {
+                flex-basis: 40%;
+            }
+            .col-2 {
+                flex-basis: 40%;
+            }
+            .col-3 {
+                flex-basis: 10%;
+            }
+            .col-4 {
+                flex-basis: 10%;
+            }
 
-        .col-5 {
-            flex-basis: 20%;
-        }
+            .col-5 {
+                flex-basis: 20%;
+            }
 
-        div {
-            font-size: 1rem;
+            div {
+                font-size: 1rem;
+            }
         }
     }
+
     .header {
         background: #8b8d94;
     }
@@ -75,12 +79,37 @@
             color: white;
         }
     }
+    .table {
+        flex-basis: 50%;
+        margin: 5px;
+
+        // background: white;
+        // box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    }
+    .form-stock {
+        flex-basis: 50%;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background: white;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+
+        li {
+            list-style: none;
+            border-radius: 3px;
+            // display: flex;
+            margin-bottom: 25px;
+            padding: 0 20px;
+        }
+    }
 }
 @media all and (max-width: 767px) {
     .container-store {
         flex-direction: column;
     }
-    .stock-table {
+    .stock-table,
+    .form-stock {
         width: 100%;
     }
 }

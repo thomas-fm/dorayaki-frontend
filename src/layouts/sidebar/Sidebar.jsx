@@ -56,13 +56,15 @@ const SidebarComponent = () => {
 
     return (
         <SidebarMenu isMobile={isMobile}>
-            <div style={{ paddingBottom: 30 }}>Stand with Dorayaki</div>
-            <SidebarItem
+            <div style={{ padding: 30, color: 'white' }}>
+                Stand with Dorayaki
+            </div>
+            {/* <SidebarItem
                 id={'dasboard'}
                 title="Dashboard"
                 icon={Dashboard}
                 onClick={() => onClick('/dashboard')}
-            />
+            /> */}
             <SidebarItem
                 id={'store'}
                 title="Toko"
@@ -71,13 +73,13 @@ const SidebarComponent = () => {
             />
             <SidebarItem
                 id={'variant'}
-                title="Variants"
+                title="Variasi"
                 icon={Variant}
                 onClick={() => onClick('/variants')}
             />
             <SidebarItem
                 id={'tambah'}
-                title="Add/Create"
+                title="Tambahkan"
                 icon={Plus}
                 onClick={() => onClick('SLUGS.agents')}
             />
