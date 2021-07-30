@@ -19,3 +19,5 @@ npm run dev
 ```
 4. API akan berjalan pada `http://localhost:3000/`
 # Screenshot website
+1. Tampilan daftar variant
+![Variant dorayaki](doc/varians.jpg?raw=true "Title")
