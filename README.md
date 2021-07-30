@@ -21,3 +21,15 @@ npm run dev
 # Screenshot website
 1. Tampilan daftar variant
 ![Variant dorayaki](doc/variants.jpg?raw=true "Title")
+2. Tampilan daftar toko
+![Toko dorayaki](doc/stores.jpg?raw=true "Title")
+3. Tampilan form penambahan toko dan variant
+![Form toko dan dorayaki](doc/forms.jpg?raw=true "Title")
+4. Tampilan tabel dan form stok toko
+![Stock toko](doc/stocks.jpg?raw=true "Title")
+5. Tampilan daftar toko versi mobile
+![Daftar toko versi mobile](doc/stores-mobile.jpg?raw=true "Title")
+6. Tampilan stock suatu toko
+![Form toko dan dorayaki](doc/stocks-mobile.jpg?raw=true "Title")
+# Author
+Thomas Ferdinand Martin - 13519099
